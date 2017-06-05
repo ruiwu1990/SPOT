@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 This folder contains a python3 file, a license file and several datasets on whch we can run SPOT and its variants.
-The python file spot.py contains 4 classes : SPOT, DSPOT, biSPOT and biDSPOT
+The python file spot.py contains 4 classes : SPOT, DSPOT, biSPOT and biDSPOT.
 The classical algorithms (SPOT and DSPOT) compute only upper threshold although
 biSPOT and biDSPOT computes upper and lower thresholds.
 
@@ -18,7 +18,7 @@ The following packages are needed to run the algorithm
 * `tqdm`	[progress bar]
 
 These libraries can be downloaded through pip3 :
-	sudo pip3 install scipy numpy pandas matplotlib tqdm --upgrade
+`pip3 install scipy numpy pandas matplotlib tqdm --upgrade`
 
 
 
