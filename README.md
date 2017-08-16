@@ -70,13 +70,13 @@ n_init = 2000
 init_data = X[:n_init] 	# initial batch
 data = X[n_init:]  		# stream
 
-q = 1e-3 			# risk parameter
-d = 450  			# depth parameter
-s = bidSPOT(q,d)     # biDSPOT object
+q = 1e-3 				# risk parameter
+d = 450  				# depth parameter
+s = bidSPOT(q,d)     	# biDSPOT object
 s.fit(init_data,data) 	# data import
-s.initialize() 	  # initialization step
-results = s.run()    # run
-s.plot(results) 	 # plot
+s.initialize() 	  		# initialization step
+results = s.run()    	# run
+s.plot(results) 	 	# plot
 ```
 
 
@@ -95,14 +95,14 @@ X = np.array(list(map(float,r)))
 
 n_init = 1000
 init_data = X[:n_init] 	# initial batch
-data = X[n_init:] 		 # stream
+data = X[n_init:] 		# stream
 
-q = 1e-4 		   # risk parameter
-s = SPOT(q) 		# biDSPOT object
+q = 1e-4  			# risk parameter
+s = SPOT(q)  		# biDSPOT object
 s.fit(init_data,data) 	# data import
 s.initialize() 		# initialization step
-results = s.run() 	 # run
-s.plot(results) 	   # plot
+results = s.run() 	# run
+s.plot(results) 	# plot
 ```
 
 
@@ -127,14 +127,14 @@ X18 = P18['rSYN'].values
 
 n_init = 1000
 init_data = X17[-n_init:] 	# initial batch
-data = X18 	   			# stream
+data = X18 	   		# stream
 
-q = 1e-4 		   # risk parameter
-s = SPOT(q) 		# biDSPOT object
+q = 1e-4 			# risk parameter
+s = SPOT(q) 		# SPOT object
 s.fit(init_data,data) 	# data import
 s.initialize() 		# initialization step
-results = s.run() 	 # run
-s.plot(results) 	   # plot
+results = s.run() 	# run
+s.plot(results) 	# plot
 ```
 
 
@@ -160,12 +160,12 @@ u_init_data = (P['DATE'] == '2017-02-08') | (P['DATE'] == '2017-02-07') | (P['DA
 init_data = P['LOW'][u_init_data].values
 
 
-q = 1e-5 			 # risk parameter
+q = 1e-5 			# risk parameter
 d = 10				# depth
-s = bidSPOT(q,d) 		  # bidSPOT object
-s.fit(init_data,data) 	 # data import
+s = bidSPOT(q,d) 	# bidSPOT object
+s.fit(init_data,data) 	# data import
 s.initialize() 			# initialization step
-results = s.run() 		 # run
+results = s.run() 	# run
 #del results['upper_thresholds'] # we can delete the upper thresholds
 s.plot(results) 		   # plot
 ```
